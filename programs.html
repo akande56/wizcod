@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiscod Foundation - Our Programs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #8e44ad;
+            --secondary-color: #e74c3c;
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .header {
+            background-color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            max-width: 180px;
+            height: auto;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .donate-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .donate-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .hero {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 150px 0 100px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .content {
+            padding: 80px 0;
+        }
+
+        .program-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 40px;
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .program-card h2 {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .program-card p {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                margin-top: 20px;
+            }
+
+            .nav-links a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .hero {
+                padding: 120px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav">
+            <img src="#" alt="Wiscod Foundation Logo" class="logo">
+            <nav class="nav-links">
+                <a href="test2.html">Home</a>
+                <a href="test2.html">About</a>
+                <a href="test2.html">Programs</a>
+                <a href="test2.html#activities">Activities</a>
+                <a href="test2.html#contact">Contact</a>
+                <a href="#" class="donate-btn">Donate Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Our Programs</h1>
+        </div>
+    </section>
+
+    <div class="container content">
+        <div class="program-card">
+            <h2>Women Peace Network</h2>
+            <p>Our Women Peace Network brings together women from diverse backgrounds to promote peace, conflict resolution, and community development. Through regular meetings and training sessions, we empower women to become active peacebuilders in their communities.</p>
+        </div>
+
+        <div class="program-card">
+            <h2>Adult Literacy Sessions</h2>
+            <p>We offer adult literacy classes in Babale, Jos North LGA of Plateau State, and other areas. These sessions aim to improve reading, writing, and basic numeracy skills among women, enabling them to participate more fully in their communities and pursue economic opportunities.</p>
+        </div>
+
+        <div class="program-card">
+            <h2>Livelihood Activities</h2>
+            <p>Our livelihood program provides training in various skills to help women achieve economic independence. Courses include:</p>
+            <ul>
+                <li>Catering</li>
+                <li>Makeup and Hairdressing</li>
+                <li>Tailoring</li>
+            </ul>
+            <p>These classes equip women with practical skills they can use to start their own businesses or find employment.</p>
+        </div>
+
+        <div class="program-card">
+            <h2>Cosmotology Classes for People with Disabilities</h2>
+            <p>We offer specialized cosmotology classes for people living with disabilities, ensuring that everyone has the opportunity to learn valuable skills and pursue their passions.</p>
+        </div>
+
+        <div class="program-card">
+            <h2>Small Scale Business Empowerment Grants</h2>
+            <p>Our grant program provides financial support to women entrepreneurs, helping them start or expand small-scale businesses. This initiative aims to foster economic growth and independence among women in our communities.</p>
+        </div>
+
+        <div class="program-card">
+            <h2>Menstrual Care and Hygiene (MCC) Program</h2>
+            <p>Our MCC program focuses on educating teenage girls about menstrual health and hygiene. We conduct monthly meetings and awareness sessions in three project implementing areas: Babale Jos North, Mai Adiko Jos South, and Gindiri Mangu LGA in Plateau State.</p>
+        </div>
+
+        <div class="program-card">
+            <h2>Safe Emergency Delivery Caregivers Program</h2>
+            <p>This program trains community members to provide safe emergency delivery care. We hold monthly meetings for caregivers in Babale Jos North, Mai Adiko Jos South, and Gindiri Mangu LGA in Plateau State, ensuring that women have access to critical support during childbirth.</p>
+        </div>
+    </div>
+</body>
+
+</html>

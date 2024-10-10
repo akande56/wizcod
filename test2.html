@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiscod Foundation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #8e44ad;
+            --secondary-color: #e74c3c;
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .header {
+            background-color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            max-width: 180px;
+            height: auto;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .donate-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .donate-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .hero {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 150px 0 100px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-btn {
+            background-color: white;
+            color: var(--primary-color);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            display: inline-block;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .content {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 40px;
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .card p {
+            margin-bottom: 20px;
+        }
+
+        .card ul {
+            padding-left: 20px;
+        }
+
+        .card ul li {
+            margin-bottom: 10px;
+        }
+
+        .card a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                margin-top: 20px;
+            }
+
+            .nav-links a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .hero {
+                padding: 120px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav">
+            <img src="#" alt="Logo" class="logo">
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <a href="#about">About</a>
+                <a href="programs.html">Programs</a>
+                <a href="activities.html">Activities</a>
+                <a href="#contact">Contact</a>
+                <a href="#" class="donate-btn">Donate Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Wiscod Foundation</h1>
+            <p>Empowering Women and Girls Through Activism and Education</p>
+            <a href="#about" class="cta-btn">Discover Our Impact</a>
+        </div>
+    </section>
+
+    <div class="container content">
+        <h2 class="section-title">Our Commitment to Women's Empowerment</h2>
+        
+        <div class="card" id="about">
+            <h2>About Us</h2>
+            <p>Wiscod (Women for Women International activists) is a non-profit organization dedicated to empowering women and girls through education, advocacy, and community engagement. Our mission is to create a world where women have equal opportunities and are active participants in shaping their communities.</p>
+        </div>
+
+        <div class="card" id="programs">
+            <h2>Our Programs</h2>
+            <ul>
+                <li>Women Peace Network</li>
+                <li>Adult Literacy Sessions</li>
+                <li>Livelihood Activities (Catering, Makeup, Hairdressing, Tailoring)</li>
+                <li>Cosmotology Classes for People with Disabilities</li>
+                <li>Small Scale Business Empowerment Grants</li>
+                <li>Menstrual Care and Hygiene (MCC) Program for Teenage Girls</li>
+                <li>Safe Emergency Delivery Caregivers Program</li>
+            </ul>
+            <button><a href="programs.html">Learn More</a></button>
+        </div>
+
+        <div class="card" id="activities">
+            <h2>Recent Activities</h2>
+            <ul>
+                <li>Monthly meetings with the Women Peace Network members</li>
+                <li>Engagement with Vigilante Group of Nigeria</li>
+                <li>Advocacy visits to community stakeholders</li>
+                <li>Graduation ceremony for 2023 livelihood beneficiaries</li>
+                <li>Commemoration of 16 Days of Activism (November 2023)</li>
+                <li>International Peace Day celebration (21st September 2024)</li>
+                <li>International Women's Day celebration (8th March 2024)</li>
+                <li>World Menstrual Day celebration (28th May 2024)</li>
+                <li>Teenage girls awareness and sensitization programs</li>
+            </ul>
+            <button><a href="activities.html">Learn More</a></button>
+        </div>
+
+        <div class="card" id="contact">
+            <h2>Contact Us</h2>
+            <p>We're here to answer your questions and provide more information about our programs. Get in touch with us:</p>
+            <ul>
+                <li>Email: <a href="mailto:info@wiscod.org">info@wiscod.org</a></li>
+                <li>Phone: [Insert phone number]</li>
+                <li>Address: [Insert address]</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

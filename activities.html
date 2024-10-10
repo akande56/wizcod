@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiscod Foundation - Our Activities</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #8e44ad;
+            --secondary-color: #e74c3c;
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .header {
+            background-color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            max-width: 180px;
+            height: auto;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .donate-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .donate-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .hero {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 150px 0 100px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .content {
+            padding: 80px 0;
+        }
+
+        .activity-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 40px;
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .activity-card h2 {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .activity-card p {
+            margin-bottom: 20px;
+        }
+
+        .activity-card .date {
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                margin-top: 20px;
+            }
+
+            .nav-links a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .hero {
+                padding: 120px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav">
+            <img src="#" alt="Wiscod Foundation Logo" class="logo">
+            <nav class="nav-links">
+                <a href="test2.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="programs.html">Programs</a>
+                <a href="activities.html">Activities</a>
+                <a href="test2.html#contact">Contact</a>
+                <a href="#" class="donate-btn">Donate Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Our Activities</h1>
+        </div>
+    </section>
+
+    <div class="container content">
+        <div class="activity-card">
+            <h2>International Women's Day Celebration</h2>
+            <p class="date">March 8, 2024</p>
+            <p>We celebrated International Women's Day with a series of events highlighting the achievements of women in our communities and discussing the challenges they face. The day included panel discussions, workshops, and a community fair showcasing women-led businesses.</p>
+        </div>
+
+        <div class="activity-card">
+            <h2>World Menstrual Hygiene Day</h2>
+            <p class="date">May 28, 2024</p>
+            <p>In collaboration with our partners, we organized awareness programs and distributed menstrual hygiene kits to teenage girls in our project areas. The event aimed to break the stigma surrounding menstruation and promote proper hygiene practices.</p>
+        </div>
+
+        <div class="activity-card">
+            <h2>Graduation Ceremony for Livelihood Beneficiaries</h2>
+            <p class="date">December 15, 2023</p>
+            <p>We celebrated the graduation of our 2023 livelihood beneficiaries from the departments of catering, makeup and hairdressing, cosmotology, and tailoring. The ceremony showcased the skills acquired by the graduates and connected them with potential employers and mentors.</p>
+        </div>
+
+        <div class="activity-card">
+            <h2>16 Days of Activism Against Gender-Based Violence</h2>
+            <p class="date">November 25 - December 10, 2023</p>
+            <p>Our team commemorated the 16 Days of Activism with a series of events, including workshops, community dialogues, and a march to raise awareness about gender-based violence. We collaborated with Women Peace Network members from our project implementing areas to maximize our impact.</p>
+        </div>
+
+        <div class="activity-card">
+            <h2>International Day of Peace Celebration</h2>
+            <p class="date">September 21, 2023</p>
+            <p>We commemorated the International Day of Peace with a gathering of Women Peace Network members from our six project implementing areas: Bible Faith, Busa Buji/Rafin Pa, Naraguta/Kunga, Anguwan Jarawa Rusau, Sabon Layi, and Febuna. The event included peace-building workshops, cultural exchanges, and a community dialogue on conflict resolution strategies.</p>
+        </div>
+
+        <div class="activity-card">
+            <h2>Monthly Women Peace Network Meetings</h2>
+            <p class="date">Ongoing (Monthly)</p>
+            <p>Our Women Peace Network holds regular monthly meetings to discuss local issues, share experiences, and plan community initiatives. These meetings foster collaboration and empower women to take active roles in peace-building and community development.</p>
+        </div>
+
+        <div class="activity-card">
+            <h2>Engagement with Vigilante Group of Nigeria</h2>
+            <p class="date">Quarterly</p>
+            <p>We regularly engage with the Vigilante Group of Nigeria to promote community safety and improve relationships between security personnel and local women. These sessions focus on gender-sensitive security practices and community-based crime prevention strategies.</p>
+        </div>
+
+        <div class="activity-card">
+            <h2>Adult Literacy Sessions in Babale</h2>
+            <p class="date">Ongoing (Weekly)</p>
+            <p>Our dedicated team conducts weekly adult literacy sessions in Babale, Jos North LGA of Plateau State. These classes focus on improving reading, writing, and basic numeracy skills, empowering women to participate more fully in their communities and pursue economic opportunities.</p>
+        </div>
+
+        <div class="activity-card">
+            <h2>Advocacy Visits to Community Stakeholders</h2>
+            <p class="date">Ongoing</p>
+            <p>We regularly conduct advocacy visits to community stakeholders, including local government officials, traditional leaders, and religious authorities. These visits aim to build support for our programs, address women's issues, and promote gender equality in decision-making processes.</p>
+        </div>
+
+        <div class="activity-card">
+            <h2>Livelihood Training Classes</h2>
+            <p class="date">Ongoing (Weekly)</p>
+            <p>Our foundation offers weekly training classes in catering, makeup and hairdressing, tailoring, and cosmotology. These classes provide women with valuable skills to start their own businesses or find employment, contributing to their economic empowerment.</p>
+        </div>
+
+        <div class="activity-card">
+            <h2>Grant Distribution for Small-Scale Businesses</h2>
+            <p class="date">Quarterly</p>
+            <p>Every quarter, we distribute grants to selected women entrepreneurs to help them start or expand their small-scale businesses. This initiative aims to foster economic growth and independence among women in our communities.</p>
+        </div>
+
+        <div class="activity-card">
+            <h2>Teenage Girls' Monthly Meetings</h2>
+            <p class="date">Ongoing (Monthly)</p>
+            <p>We conduct monthly meetings with teenage girls in our three project implementing areas: Babale Jos North, Mai Adiko Jos South, and Gindiri Mangu LGA, Plateau State. These meetings focus on menstrual health education, life skills development, and empowerment discussions.</p>
+        </div>
+
+        <div class="activity-card">
+            <h2>Safe Emergency Delivery Caregivers' Meetings</h2>
+            <p class="date">Ongoing (Monthly)</p>
+            <p>Our Safe Emergency Delivery Caregivers program holds monthly meetings in Babale Jos North, Mai Adiko Jos South, and Gindiri Mangu LGA, Plateau State. These sessions provide ongoing training and support to community members who assist with emergency deliveries, ensuring safer childbirth experiences for women in remote areas.</p>
+        </div>
+    </div>
+</body>
+
+</html>  
