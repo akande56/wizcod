@@ -26,7 +26,7 @@
         .header {
             background-color: white;
             padding: 20px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: fixed;
             width: 100%;
             top: 0;
@@ -131,7 +131,7 @@
         .card {
             background-color: white;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             padding: 40px;
             margin-bottom: 40px;
             transition: transform 0.3s ease;
@@ -167,6 +167,32 @@
 
         .card a:hover {
             text-decoration: underline;
+        }
+
+        .more-btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .more-btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .more-btn:active {
+            transform: translateY(1px);
+        }
+        
+        .more-btn a {
+            text-decoration: none;
         }
 
         @media (max-width: 768px) {
@@ -220,10 +246,12 @@
 
     <div class="container content">
         <h2 class="section-title">Our Commitment to Women's Empowerment</h2>
-        
+
         <div class="card" id="about">
             <h2>About Us</h2>
-            <p>Wiscod (Women for Women International activists) is a non-profit organization dedicated to empowering women and girls through education, advocacy, and community engagement. Our mission is to create a world where women have equal opportunities and are active participants in shaping their communities.</p>
+            <p>Wiscod (Women for Women International activists) is a non-profit organization dedicated to empowering
+                women and girls through education, advocacy, and community engagement. Our mission is to create a world
+                where women have equal opportunities and are active participants in shaping their communities.</p>
         </div>
 
         <div class="card" id="programs">
@@ -237,7 +265,7 @@
                 <li>Menstrual Care and Hygiene (MCC) Program for Teenage Girls</li>
                 <li>Safe Emergency Delivery Caregivers Program</li>
             </ul>
-            <button><a href="programs.html">Learn More</a></button>
+            <button class="more-btn"><a href="programs.html">Learn More</a></button>
         </div>
 
         <div class="card" id="activities">
@@ -253,12 +281,13 @@
                 <li>World Menstrual Day celebration (28th May 2024)</li>
                 <li>Teenage girls awareness and sensitization programs</li>
             </ul>
-            <button><a href="activities.html">Learn More</a></button>
+            <button class="more-btn"><a href="activities.html">Learn More</a></button>
         </div>
 
         <div class="card" id="contact">
             <h2>Contact Us</h2>
-            <p>We're here to answer your questions and provide more information about our programs. Get in touch with us:</p>
+            <p>We're here to answer your questions and provide more information about our programs. Get in touch with
+                us:</p>
             <ul>
                 <li>Email: <a href="mailto:info@wiscod.org">info@wiscod.org</a></li>
                 <li>Phone: [Insert phone number]</li>
