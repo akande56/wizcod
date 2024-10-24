@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    
+    <!-- PhotoSwipe Core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .content {
+            margin-top: 8rem;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .gallery-container {
+            margin: 0 -8px;
+        }
+        
+        .gallery-grid {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .gallery-item {
+            width: calc(33.333% - 16px);
+            margin: 8px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .gallery-item-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .gallery-item:hover .gallery-item-overlay {
+            opacity: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-item {
+                width: calc(50% - 16px);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery-item {
+                width: calc(100% - 16px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container nav">
+            <img src="logo.jpeg" alt="Logo" class="logo">
+            <nav class="nav-links">
+                <a href="index.html"> <i class="fas fa-home"></i> Home</a>
+                <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+                <a href="programs.html"><i class="fas fa-project-diagram"></i> Programs</a>
+                <a href="activities.html"><i class="fas fa-calendar-alt"></i> Activities</a>
+                <a href="gallery.html" class="active">Gallery</a>
+                <a href="index.html#contact"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="#" class="donate-btn"><i class="fas fa-heart"></i> Donate Now</a>
+            </nav>
+        </div>
+    </header>
+    <div class="content" role="main">
+        <div class="container">
+            <h1 id="our-gallery" class="section-title">Our Gallery</h1>
+            
+            <p>Explore our visual journey of empowering women and transforming communities through sustainable development initiatives.</p>
+            
+            <div class="gallery-container">
+                <div class="gallery-grid">
+                    <!-- Sample gallery items -->
+                    <div class="gallery-item">
+                        <img src="./images/coaching1.JPG" alt="Coaching And Mentoring">
+                        <div class="gallery-item-overlay">
+                            <span>Coaching And Mentoring 1</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/coaching2.JPG" alt="Coaching And Mentoring">
+                        <div class="gallery-item-overlay">
+                            <span>Coaching And Mentoring 2</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/coaching3.JPG" alt="Coaching And Mentoring">
+                        <div class="gallery-item-overlay">
+                            <span>Coaching And Mentoring 3</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/coaching4.JPG" alt="Coaching And Mentoring">
+                        <div class="gallery-item-overlay">
+                            <span>Coaching And Mentoring 4</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/coaching5.JPG" alt="Coaching And Mentoring">
+                        <div class="gallery-item-overlay">
+                            <span>Coaching And Mentoring 5</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/coaching6.jpg" alt="Coaching And Mentoring">
+                        <div class="gallery-item-overlay">
+                            <span>Coaching And Mentoring 6</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/activity1.JPG" alt="Activities">
+                        <div class="gallery-item-overlay">
+                            <span>Activities 1 </span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/activity2.JPG" alt="Activities">
+                        <div class="gallery-item-overlay">
+                            <span>Activities 2 </span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/activity3.JPG" alt="Activities">
+                        <div class="gallery-item-overlay">
+                            <span>Activities 3 </span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/activity4.JPG" alt="Activities">
+                        <div class="gallery-item-overlay">
+                            <span>Activities 4 </span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/advocacy1.JPG" alt="Advocacy visits to PHC">
+                        <div class="gallery-item-overlay">
+                            <span>Advocacy visits to PHC 1 </span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/advocacy2.JPG" alt="Advocacy visits to PHC">
+                        <div class="gallery-item-overlay">
+                            <span>Advocacy visits to PHC 2 </span>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="./images/advocacy3.JPG" alt="Advocacy visits to PHC">
+                        <div class="gallery-item-overlay">
+                            <span>Advocacy visits to PHC 3 </span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/advocacy4.JPG" alt="Advocacy visits to PHC">
+                        <div class="gallery-item-overlay">
+                            <span>Advocacy visits to PHC 4 </span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/cbt2.JPG" alt="Capacity Building Training">
+                        <div class="gallery-item-overlay">
+                            <span>Capacity Building Training 1 </span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/cbt3.JPG" alt="Capacity Building Training">
+                        <div class="gallery-item-overlay">
+                            <span>Capacity Building Training 2 </span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/cbt4.JPG" alt="Capacity Building Training">
+                        <div class="gallery-item-overlay">
+                            <span>Capacity Building Training 3 </span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/cbt5.JPG" alt="Capacity Building Training">
+                        <div class="gallery-item-overlay">
+                            <span>Capacity Building Training 4 </span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/cbt6.JPG" alt="Capacity Building Training">
+                        <div class="gallery-item-overlay">
+                            <span>Capacity Building Training 5 </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PhotoSwipe -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe-lightbox.umd.min.js"></script>
+    
+    <!-- Masonry -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    
+    <!-- imagesLoaded -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
+    
+    <script>
+        // Initialize PhotoSwipe Lightbox
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '.gallery-grid',
+            children: '.gallery-item',
+            pswpModule: PhotoSwipe,
+            showHideAnimationType: 'fade',
+            
+            // Get the correct source for each image
+            dataSource: [
+                {
+                    src: './images/coaching1.JPG',
+                    width: 1600,
+                    height: 1200,
+                    // alt: 'Coaching And Mentoring'
+                },
+                {
+                    src: '/api/placeholder/1600/1200',
+                    width: 1600,
+                    height: 1200,
+                    // alt: 'Women Empowerment'
+                },
+                {
+                    src: '/api/placeholder/1600/1200',
+                    width: 1600,
+                    height: 1200,
+                    // alt: 'Advocacy visits to PHC'
+                }
+            ]
+        });
+        lightbox.init();
+
+        // Initialize Masonry layout after images are loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            const grid = document.querySelector('.gallery-grid');
+            imagesLoaded(grid, function() {
+                new Masonry(grid, {
+                    itemSelector: '.gallery-item',
+                    columnWidth: '.gallery-item',
+                    percentPosition: true
+                });
+            });
+        });
+    </script>
+</body>
+</html>

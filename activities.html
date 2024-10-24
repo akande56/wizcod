@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wiscod Foundation - Our Activities</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
         .container.content {
             display: grid;
             grid-template-columns: 250px 1fr;
-            gap: 2rem;
+            /* gap: 2rem; */
             padding-top: 2rem
         }
 
@@ -25,7 +25,7 @@
             background-color: var(--primary-white);
             border-radius: 8px;
             box-shadow: var(--shadow-sm);
-            padding: 1.5rem;
+            padding: 1rem;
             margin-bottom: 2rem;
             align-self: start;
         }
@@ -136,91 +136,109 @@
 <body>
     <header class="header">
         <div class="container nav">
-            <img src="./logo.jpeg" alt="Wiscod Foundation Logo" class="logo">
+            <img src="logo.jpeg" alt="Logo" class="logo">
             <nav class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="index.html#about">About</a>
-                <a href="programs.html">Programs</a>
-                <a href="activities.html">Activities</a>
-                <a href="index.html#contact">Contact</a>
-                <a href="#" class="donate-btn">Donate Now</a>
+                <a href="index.html"> <i class="fas fa-home"></i> Home</a>
+                <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+                <a href="programs.html"><i class="fas fa-project-diagram"></i> Programs</a>
+                <a href="activities.html"><i class="fas fa-calendar-alt"></i> Activities</a>
+                <a href="gallery.html" class="active">Gallery</a>
+                <a href="index.html#contact"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="#" class="donate-btn"><i class="fas fa-heart"></i> Donate Now</a>
             </nav>
         </div>
     </header>
 
     <section class="hero" style="background-image: url('images/advocacy4.JPG'); background-position: center;">
         <div class="container">
-            <h1>Our Activities</h1>
+            <h1> <i class="fas fa-calendar-check"></i> Our Activities</h1>
         </div>
     </section>
 
     <div class="container content" style="display: flex;">
         <div class="timeline">
-            <div class="timeline-item" onclick="scrollToActivity('2019')">2019</div>
-            <div class="timeline-item" onclick="scrollToActivity('2020')">2020</div>
-            <div class="timeline-item" onclick="scrollToActivity('2021')">2021</div>
-            <div class="timeline-item" onclick="scrollToActivity('2022')">2022</div>
-            <div class="timeline-item" onclick="scrollToActivity('2023')">2023</div>
-            <div class="timeline-item" onclick="scrollToActivity('2024')">2024</div>
+            <div class="timeline-item" onclick="scrollToActivity('2019')"><i class="fas fa-calendar"
+                    style="display: inline;"></i>2019</div>
+            <div class="timeline-item" onclick="scrollToActivity('2020')"><i class="fas fa-calendar"
+                    style="display: inline;"></i>2020</div>
+            <div class="timeline-item" onclick="scrollToActivity('2021')"><i class="fas fa-calendar"
+                    style="display: inline;"></i>2021</div>
+            <div class="timeline-item" onclick="scrollToActivity('2022')"><i class="fas fa-calendar"
+                    style="display: inline;"></i>2022</div>
+            <div class="timeline-item" onclick="scrollToActivity('2023')"><i class="fas fa-calendar"
+                    style="display: inline;"></i>2023</div>
+            <div class="timeline-item" onclick="scrollToActivity('2024')"><i class="fas fa-calendar"
+                    style="display: inline;"></i>2024</div>
         </div>
         <div class="activities">
             <div id="2019" class="activity-card">
                 <img src="/api/placeholder/800/600" alt="Community and Maternal Health Project" class="activity-image">
-                <h2>Building a Viable Community and Reducing Maternal and Child Mortality</h2>
-                <p class="date">2019 - 2023</p>
-                <p>Key activities include:</p>
+                <h2> <i class="fas fa-heartbeat"></i> Building a Viable Community and Reducing Maternal and Child
+                    Mortality</h2>
+                <p class="date"><i class="fas fa-clock"></i>2019 - 2023</p>
+                <p> <i class="fas fa-list-check"></i> Key activities include:</p>
                 <ul>
-                    <li>Advocacy visits to project areas</li>
-                    <li>Capacity building trainings for Peer Educators</li>
-                    <li>Safe Emergency Delivery Care givers (SEDC) training</li>
-                    <li>Teenage Girls monthly interactive sessions</li>
-                    <li>HIV counseling and testing</li>
-                    <li>Production and distribution of Reusable Sanitary Pads</li>
+                    <li><i class="fas fa-people-arrows"></i> Advocacy visits to project areas</li>
+                    <li><i class="fas fa-chalkboard-teacher"></i> Capacity building trainings for Peer Educators</li>
+                    <li><i class="fas fa-user-md"></i> Safe Emergency Delivery Care givers (SEDC) training</li>
+                    <li><i class="fas fa-users"></i> Teenage Girls monthly interactive sessions</li>
+                    <li><i class="fas fa-notes-medical"></i> HIV counseling and testing</li>
+                    <li><i class="fas fa-box-tissue"></i> Production and distribution of Reusable Sanitary Pads</li>
                 </ul>
             </div>
 
             <div id="2021" class="activity-card">
                 <img src="/api/placeholder/800/600" alt="Women's Peace and Security Project" class="activity-image">
-                <h2>Increasing Women's Participation in Peace and Security</h2>
-                <p class="date">2021 - 2024</p>
-                <p>This project includes:</p>
+                <h2> <i class="fas fa-dove"></i> Increasing Women's Participation in Peace and Security</h2>
+                <p class="date"><i class="fas fa-clock"></i>2021 - 2024</p>
+                <p> <i class="fas fa-list-check"></i> This project includes:</p>
                 <ul>
-                    <li>Capacity Building trainings for Women Peace Network members</li>
-                    <li>Establishment of Women Peace Network in project areas</li>
-                    <li>Basic and Post literacy classes</li>
-                    <li>Livelihood Activities in Baking, Catering, Make-up, Hair Dressing, Tailoring, and Cosmetology
+                    <li><i class="fas fa-users-gear"></i> Capacity Building trainings for Women Peace Network members
                     </li>
-                    <li>Village and Savings Association Group (VSLA)</li>
+                    <li><i class="fas fa-handshake"></i> Establishment of Women Peace Network in project areas</li>
+                    <li><i class="fas fa-book-reader"></i> Basic and Post literacy classes</li>
+                    <li><i class="fas fa-hand-holding-dollar"></i> Livelihood Activities in:
+                        <ul>
+                            <li><i class="fas fa-cake-candles"></i> Baking</li>
+                            <li><i class="fas fa-utensils"></i> Catering</li>
+                            <li><i class="fas fa-paint-brush"></i> Make-up</li>
+                            <li><i class="fas fa-scissors"></i> Hair Dressing</li>
+                            <li><i class="fas fa-tshirt"></i> Tailoring</li>
+                            <li><i class="fas fa-spa"></i> Cosmetology</li>
+                        </ul>
+                    </li>
+                    <li><i class="fas fa-piggy-bank"></i> Village and Savings Association Group (VSLA)</li>
                 </ul>
             </div>
 
             <div id="2023" class="activity-card">
                 <img src="/api/placeholder/800/600" alt="International Days Celebrations" class="activity-image">
-                <h2>International Days Celebrations</h2>
-                <p class="date">2023</p>
-                <p>We celebrated various international days, including:</p>
+                <h2> <i class="fas fa-globe"></i> International Days Celebrations</h2>
+                <!-- <p class="date"><i class="fas fa-clock"></i>2023</p> -->
+                <h3><i class="fas fa-calendar-day"></i> We celebrated:</h3>
                 <ul>
-                    <li>International Peace Day</li>
-                    <li>International Women's Day</li>
-                    <li>16 Days of activism</li>
-                    <li>World Menstrual Hygiene Day</li>
+                    <li><i class="fas fa-dove"></i> International Peace Day</li>
+                    <li><i class="fas fa-venus"></i> International Women's Day</li>
+                    <li><i class="fas fa-fist-raised"></i> 16 Days of activism</li>
+                    <li><i class="fas fa-droplet"></i> World Menstrual Hygiene Day</li>
                 </ul>
             </div>
 
             <div id="2024" class="activity-card">
                 <img src="/api/placeholder/800/600" alt="Ongoing Activities" class="activity-image">
-                <h2>Ongoing Activities</h2>
-                <p class="date">2024</p>
-                <p>Our current activities include:</p>
+                <h2> <i class="fas fa-spinner fa-spin"></i> Ongoing Activities</h2>
+                <p class="date"><i class="fas fa-clock"></i>2024</p>
+                <h3><i class="fas fa-list-check"></i> Current activities:</h3>
                 <ul>
-                    <li>Monthly Women Peace Network Meetings</li>
-                    <li>Quarterly Engagement with Vigilante Group of Nigeria</li>
-                    <li>Weekly Adult Literacy Sessions in Babale</li>
-                    <li>Advocacy Visits to Community Stakeholders</li>
-                    <li>Weekly Livelihood Training Classes</li>
-                    <li>Quarterly Grant Distribution for Small-Scale Businesses</li>
-                    <li>Monthly Teenage Girls' Meetings</li>
-                    <li>Monthly Safe Emergency Delivery Caregivers' Meetings</li>
+                    <li><i class="fas fa-users"></i> Monthly Women Peace Network Meetings</li>
+                    <li><i class="fas fa-shield-alt"></i> Quarterly Engagement with Vigilante Group of Nigeria</li>
+                    <li><i class="fas fa-book-reader"></i> Weekly Adult Literacy Sessions in Babale</li>
+                    <li><i class="fas fa-handshake"></i> Advocacy Visits to Community Stakeholders</li>
+                    <li><i class="fas fa-tools"></i> Weekly Livelihood Training Classes</li>
+                    <li><i class="fas fa-hand-holding-dollar"></i> Quarterly Grant Distribution for Small-Scale
+                        Businesses</li>
+                    <li><i class="fas fa-user-graduate"></i> Monthly Teenage Girls' Meetings</li>
+                    <li><i class="fas fa-user-md"></i> Monthly Safe Emergency Delivery Caregivers' Meetings</li>
                 </ul>
             </div>
         </div>
