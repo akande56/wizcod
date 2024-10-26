@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
-    
+
     <!-- PhotoSwipe Core CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe.min.css">
     <link rel="stylesheet" href="style.css">
@@ -13,26 +14,26 @@
             margin-top: 8rem;
             padding: 2rem;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         .section-title {
             text-align: center;
             margin-bottom: 2rem;
         }
-        
+
         .gallery-container {
             margin: 0 -8px;
         }
-        
+
         .gallery-grid {
             display: flex;
             flex-wrap: wrap;
         }
-        
+
         .gallery-item {
             width: calc(33.333% - 16px);
             margin: 8px;
@@ -41,18 +42,24 @@
             overflow: hidden;
             border-radius: 8px;
             transition: transform 0.3s ease;
+            display: none;
         }
-        
+
+        .gallery-item.active {
+            display: block;
+            /* Show only active items */
+        }
+
         .gallery-item:hover {
             transform: scale(1.02);
         }
-        
+
         .gallery-item img {
             width: 100%;
-            height: auto;
+            height:auto;
             display: block;
         }
-        
+
         .gallery-item-overlay {
             position: absolute;
             top: 0;
@@ -67,24 +74,69 @@
             justify-content: center;
             color: white;
         }
-        
+
         .gallery-item:hover .gallery-item-overlay {
             opacity: 1;
         }
-        
+
+        .gallery-navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .nav-btn {
+            padding: 0.5rem 1.5rem;
+            background-color:#eb1b1b;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 1rem;
+        }
+
+        .nav-btn:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+
+        .nav-btn:hover:not(:disabled) {
+            background-color: #cc0000;
+            transform: translateY(-2px);
+        }
+
+        .gallery-navigation button {
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        .gallery-navigation button:disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .gallery-container {
+            margin-top: 2rem;
+        }
+
         @media (max-width: 768px) {
             .gallery-item {
                 width: calc(50% - 16px);
             }
         }
-        
+
         @media (max-width: 480px) {
             .gallery-item {
                 width: calc(100% - 16px);
             }
         }
     </style>
+
 </head>
+
 <body>
     <header class="header">
         <div class="container nav">
@@ -103,126 +155,402 @@
     <div class="content" role="main">
         <div class="container">
             <h1 id="our-gallery" class="section-title">Our Gallery</h1>
-            
-            <p>Explore our visual journey of empowering women and transforming communities through sustainable development initiatives.</p>
-            
+
+            <p>Explore our visual journey of empowering women and transforming communities through sustainable
+                development initiatives.</p>
+
             <div class="gallery-container">
+                <div class="gallery-navigation">
+                    <button id="prevBtn" class="nav-btn">Previous</button>
+                    <span id="pageInfo">Page 1 of 4</span>
+                    <button id="nextBtn" class="nav-btn">Next</button>
+                </div>
+
                 <div class="gallery-grid">
-                    <!-- Sample gallery items -->
-                    <div class="gallery-item">
-                        <img src="./images/coaching1.JPG" alt="Coaching And Mentoring">
-                        <div class="gallery-item-overlay">
-                            <span>Coaching And Mentoring 1</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="./images/coaching2.JPG" alt="Coaching And Mentoring">
-                        <div class="gallery-item-overlay">
-                            <span>Coaching And Mentoring 2</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="./images/coaching3.JPG" alt="Coaching And Mentoring">
-                        <div class="gallery-item-overlay">
-                            <span>Coaching And Mentoring 3</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="./images/coaching4.JPG" alt="Coaching And Mentoring">
-                        <div class="gallery-item-overlay">
-                            <span>Coaching And Mentoring 4</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="./images/coaching5.JPG" alt="Coaching And Mentoring">
-                        <div class="gallery-item-overlay">
-                            <span>Coaching And Mentoring 5</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="./images/coaching6.jpg" alt="Coaching And Mentoring">
-                        <div class="gallery-item-overlay">
-                            <span>Coaching And Mentoring 6</span>
-                        </div>
-                    </div>
+                    <!-- Activities (1-4) -->
                     <div class="gallery-item">
                         <img src="./images/activity1.JPG" alt="Activities">
-                        <div class="gallery-item-overlay">
-                            <span>Activities 1 </span>
-                        </div>
+                        <div class="gallery-item-overlay">Activisim</div>
                     </div>
                     <div class="gallery-item">
                         <img src="./images/activity2.JPG" alt="Activities">
-                        <div class="gallery-item-overlay">
-                            <span>Activities 2 </span>
-                        </div>
+                        <div class="gallery-item-overlay">Activisim</div>
                     </div>
                     <div class="gallery-item">
                         <img src="./images/activity3.JPG" alt="Activities">
-                        <div class="gallery-item-overlay">
-                            <span>Activities 3 </span>
-                        </div>
+                        <div class="gallery-item-overlay">Activisim</div>
                     </div>
                     <div class="gallery-item">
                         <img src="./images/activity4.JPG" alt="Activities">
-                        <div class="gallery-item-overlay">
-                            <span>Activities 4 </span>
-                        </div>
+                        <div class="gallery-item-overlay">Activisim</div>
+                    </div>
+
+                    <!-- Advocacy (1-4) -->
+                    <div class="gallery-item">
+                        <img src="./images/advocacy1.JPG" alt="Advocacy visits">
+                        <div class="gallery-item-overlay">Advocacy visits to the PHC</div>
                     </div>
                     <div class="gallery-item">
-                        <img src="./images/advocacy1.JPG" alt="Advocacy visits to PHC">
-                        <div class="gallery-item-overlay">
-                            <span>Advocacy visits to PHC 1 </span>
-                        </div>
+                        <img src="./images/advocacy2.JPG" alt="Advocacy visits">
+                        <div class="gallery-item-overlay">Advocacy visits to the PHC</div>
                     </div>
                     <div class="gallery-item">
-                        <img src="./images/advocacy2.JPG" alt="Advocacy visits to PHC">
-                        <div class="gallery-item-overlay">
-                            <span>Advocacy visits to PHC 2 </span>
-                        </div>
-                    </div>
-                    
-                    <div class="gallery-item">
-                        <img src="./images/advocacy3.JPG" alt="Advocacy visits to PHC">
-                        <div class="gallery-item-overlay">
-                            <span>Advocacy visits to PHC 3 </span>
-                        </div>
+                        <img src="./images/advocacy3.JPG" alt="Advocacy visits">
+                        <div class="gallery-item-overlay">Advocacy visits to the PHC</div>
                     </div>
                     <div class="gallery-item">
-                        <img src="./images/advocacy4.JPG" alt="Advocacy visits to PHC">
-                        <div class="gallery-item-overlay">
-                            <span>Advocacy visits to PHC 4 </span>
-                        </div>
+                        <img src="./images/advocacy4.JPG" alt="Advocacy visits">
+                        <div class="gallery-item-overlay">Advocacy visits to the PHC</div>
+                    </div>
+
+                    <!-- Catering (1-17) -->
+                    <div class="gallery-item">
+                        <img src="./images/CAT1.JPG" alt="Catering">
+                        <div class="gallery-item-overlay">Skills acquisation; catering</div>
                     </div>
                     <div class="gallery-item">
-                        <img src="./images/cbt2.JPG" alt="Capacity Building Training">
-                        <div class="gallery-item-overlay">
-                            <span>Capacity Building Training 1 </span>
-                        </div>
+                        <img src="./images/CAT2.JPG" alt="Catering">
+                        <div class="gallery-item-overlay">Skills acquisation; catering</div>
                     </div>
                     <div class="gallery-item">
-                        <img src="./images/cbt3.JPG" alt="Capacity Building Training">
-                        <div class="gallery-item-overlay">
-                            <span>Capacity Building Training 2 </span>
-                        </div>
+                        <img src="./images/CAT3.JPG" alt="Catering">
+                        <div class="gallery-item-overlay">Skills acquisation; catering</div>
                     </div>
                     <div class="gallery-item">
-                        <img src="./images/cbt4.JPG" alt="Capacity Building Training">
-                        <div class="gallery-item-overlay">
-                            <span>Capacity Building Training 3 </span>
-                        </div>
+                        <img src="./images/CAT4.JPG" alt="Catering">
+                        <div class="gallery-item-overlay">Skills acquisation; catering</div>
                     </div>
                     <div class="gallery-item">
-                        <img src="./images/cbt5.JPG" alt="Capacity Building Training">
-                        <div class="gallery-item-overlay">
-                            <span>Capacity Building Training 4 </span>
-                        </div>
+                        <img src="./images/CAT5.JPG" alt="Catering">
+                        <div class="gallery-item-overlay">Skills acquisation; catering</div>
                     </div>
                     <div class="gallery-item">
-                        <img src="./images/cbt6.JPG" alt="Capacity Building Training">
-                        <div class="gallery-item-overlay">
-                            <span>Capacity Building Training 5 </span>
-                        </div>
+                        <img src="./images/CAT6.JPG" alt="Catering">
+                        <div class="gallery-item-overlay">Skills acquisation; catering</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/CAT7.JPG" alt="Catering">
+                        <div class="gallery-item-overlay">Skills acquisation; catering</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/CAT8.JPG" alt="Catering">
+                        <div class="gallery-item-overlay">Skills acquisation; catering</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/CAT9.JPG" alt="Catering">
+                        <div class="gallery-item-overlay">Skills acquisation; catering</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/CAT10.JPG" alt="Catering">
+                        <div class="gallery-item-overlay">Skills acquisation; catering</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/CAT11.JPG" alt="Catering">
+                        <div class="gallery-item-overlay">Skills acquisation; catering</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/CAT12.JPG" alt="Catering">
+                        <div class="gallery-item-overlay">Skills acquisation; catering</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/CAT13.JPG" alt="Catering">
+                        <div class="gallery-item-overlay">Skills acquisation; catering</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/CAT14.JPG" alt="Catering">
+                        <div class="gallery-item-overlay">Skills acquisation; catering</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/CAT15.JPG" alt="Catering">
+                        <div class="gallery-item-overlay">Skills acquisation; catering</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/CAT16.JPG" alt="Catering">
+                        <div class="gallery-item-overlay">Skills acquisation; catering</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/CAT17.JPG" alt="Catering">
+                        <div class="gallery-item-overlay">Skills acquisation; catering</div>
+                    </div>
+                    <!-- CBT (1-6) -->
+                    <div class="gallery-item">
+                        <img src="./images/cbt1.JPG" alt="Capacity Building">
+                        <div class="gallery-item-overlay">Capacity building training</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/cbt2.JPG" alt="Capacity Building">
+                        <div class="gallery-item-overlay">Capacity building training</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/cbt3.JPG" alt="Capacity Building">
+                        <div class="gallery-item-overlay">Capacity building training</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/cbt4.JPG" alt="Capacity Building">
+                        <div class="gallery-item-overlay">Capacity building training</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/cbt5.JPG" alt="Capacity Building">
+                        <div class="gallery-item-overlay">Capacity building training</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/cbt6.JPG" alt="Capacity Building">
+                        <div class="gallery-item-overlay">Capacity building training</div>
+                    </div>
+
+                    <!-- Coaching (1-6) -->
+                    <div class="gallery-item">
+                        <img src="./images/coaching1.jpg" alt="Coaching">
+                        <div class="gallery-item-overlay">Coaching and mentoring</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/coaching2.jpg" alt="Coaching">
+                        <div class="gallery-item-overlay">Coaching and mentoring</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/coaching3.jpg" alt="Coaching">
+                        <div class="gallery-item-overlay">Coaching and mentoring</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/coaching4.jpg" alt="Coaching">
+                        <div class="gallery-item-overlay">Coaching and mentoring</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/coaching5.jpg" alt="Coaching">
+                        <div class="gallery-item-overlay">Coaching and mentoring</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/coaching6.jpg" alt="Coaching">
+                        <div class="gallery-item-overlay">Coaching and mentoring</div>
+                    </div>
+
+                    <!-- Cosmetology (1-4) -->
+                    <div class="gallery-item">
+                        <img src="./images/COSMETOLOGY1.JPG" alt="Cosmetology">
+                        <div class="gallery-item-overlay">Skills acquisation; cosmetology</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/COSMETOLOGY2.JPG" alt="Cosmetology">
+                        <div class="gallery-item-overlay">Skills acquisation; cosmetology</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/COSMETOLOGY3.JPG" alt="Cosmetology">
+                        <div class="gallery-item-overlay">Skills acquisation; cosmetology</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/COSMETOLOGY4.JPG" alt="Cosmetology">
+                        <div class="gallery-item-overlay">Skills acquisation; cosmetology</div>
+                    </div>
+                    <!-- EVG (1-4) -->
+                    <div class="gallery-item">
+                        <img src="./images/EVG1.JPG" alt="VGN Engagement">
+                        <div class="gallery-item-overlay">Engagement with VGN</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/EVG2.JPG" alt="VGN Engagement">
+                        <div class="gallery-item-overlay">Engagement with VGN</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/EVG3.JPG" alt="VGN Engagement">
+                        <div class="gallery-item-overlay">Engagement with VGN</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/EVG4.JPG" alt="VGN Engagement">
+                        <div class="gallery-item-overlay">Engagement with VGN</div>
+                    </div>
+
+                    <!-- Grant (1-3) -->
+                    <div class="gallery-item">
+                        <img src="./images/GRANT1.JPG" alt="Grant">
+                        <div class="gallery-item-overlay">Skills acquisation; grant</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/GRANT2.JPG" alt="Grant">
+                        <div class="gallery-item-overlay">Skills acquisation; grant</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/GRANT3.JPG" alt="Grant">
+                        <div class="gallery-item-overlay">Skills acquisation; grant</div>
+                    </div>
+
+                    <!-- Literacy (1-3) -->
+                    <div class="gallery-item">
+                        <img src="./images/LIT1.JPG" alt="Literacy">
+                        <div class="gallery-item-overlay">Education Literacy program</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/LIT2.JPG" alt="Literacy">
+                        <div class="gallery-item-overlay">Education Literacy program</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/LIT3.JPG" alt="Literacy">
+                        <div class="gallery-item-overlay">Education Literacy program</div>
+                    </div>
+
+                    <!-- Make Up (1-11) -->
+                    <div class="gallery-item">
+                        <img src="./images/MAKE_UP1.JPG" alt="Make Up">
+                        <div class="gallery-item-overlay">Skills acquisation; make up and hair dressing</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/MAKE_UP2.JPG" alt="Make Up">
+                        <div class="gallery-item-overlay">Skills acquisation; make up and hair dressing</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/MAKE_UP3.JPG" alt="Make Up">
+                        <div class="gallery-item-overlay">Skills acquisation; make up and hair dressing</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/MAKE_UP4.JPG" alt="Make Up">
+                        <div class="gallery-item-overlay">Skills acquisation; make up and hair dressing</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/MAKE_UP5.JPG" alt="Make Up">
+                        <div class="gallery-item-overlay">Skills acquisation; make up and hair dressing</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/MAKE_UP6.JPG" alt="Make Up">
+                        <div class="gallery-item-overlay">Skills acquisation; make up and hair dressing</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/MAKE_UP7.JPG" alt="Make Up">
+                        <div class="gallery-item-overlay">Skills acquisation; make up and hair dressing</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/MAKE_UP8.JPG" alt="Make Up">
+                        <div class="gallery-item-overlay">Skills acquisation; make up and hair dressing</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/MAKE_UP9.JPG" alt="Make Up">
+                        <div class="gallery-item-overlay">Skills acquisation; make up and hair dressing</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/MAKE_UP10.JPG" alt="Make Up">
+                        <div class="gallery-item-overlay">Skills acquisation; make up and hair dressing</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/MAKE_UP11.JPG" alt="Make Up">
+                        <div class="gallery-item-overlay">Skills acquisation; make up and hair dressing</div>
+                    </div>
+
+                    <!-- MCC 2021 (1-7) -->
+                    <div class="gallery-item">
+                        <img src="./images/MCC_2021_1.jpg" alt="MCC 2021">
+                        <div class="gallery-item-overlay">Menstrual Care and Hygiene (MCC) Program</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/MCC_2021_2.jpg" alt="MCC 2021">
+                        <div class="gallery-item-overlay">Menstrual Care and Hygiene (MCC) Program</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/MCC_2021_3.jpg" alt="MCC 2021">
+                        <div class="gallery-item-overlay">Menstrual Care and Hygiene (MCC) Program</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/MCC_2021_4.jpg" alt="MCC 2021">
+                        <div class="gallery-item-overlay">Menstrual Care and Hygiene (MCC) Program</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/MCC_2021_5.jpg" alt="MCC 2021">
+                        <div class="gallery-item-overlay">Menstrual Care and Hygiene (MCC) Program</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/MCC_2021_6.jpg" alt="MCC 2021">
+                        <div class="gallery-item-overlay">Menstrual Care and Hygiene (MCC) Program</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/MCC_2021_7.jpg" alt="MCC 2021">
+                        <div class="gallery-item-overlay">Menstrual Care and Hygiene (MCC) Program</div>
+                    </div>
+
+                    <!-- MCC 2022 (1-6) -->
+                    <div class="gallery-item">
+                        <img src="./images/MCC_2022_1.jpg" alt="MCC 2022">
+                        <div class="gallery-item-overlay">Menstrual Care and Hygiene (MCC) Program</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/MCC_2022_2.jpg" alt="MCC 2022">
+                        <div class="gallery-item-overlay">Menstrual Care and Hygiene (MCC) Program</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/MCC_2022_3.jpg" alt="MCC 2022">
+                        <div class="gallery-item-overlay">Menstrual Care and Hygiene (MCC) Program</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/MCC_2022_4.jpg" alt="MCC 2022">
+                        <div class="gallery-item-overlay">Menstrual Care and Hygiene (MCC) Program</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/MCC_2022_5.jpg" alt="MCC 2022">
+                        <div class="gallery-item-overlay">Menstrual Care and Hygiene (MCC) Program</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/MCC_2022_6.jpg" alt="MCC 2022">
+                        <div class="gallery-item-overlay">Menstrual Care and Hygiene (MCC) Program</div>
+                    </div>
+
+                    <!-- Orientation (1-5) -->
+                    <div class="gallery-item">
+                        <img src="./images/ORT1.JPG" alt="Orientation">
+                        <div class="gallery-item-overlay">Orientation</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/ORT2.JPG" alt="Orientation">
+                        <div class="gallery-item-overlay">Orientation</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/ORT3.JPG" alt="Orientation">
+                        <div class="gallery-item-overlay">Orientation</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/ORT4.JPG" alt="Orientation">
+                        <div class="gallery-item-overlay">Orientation</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/ORT5.JPG" alt="Orientation">
+                        <div class="gallery-item-overlay">Orientation</div>
+                    </div>
+
+                    <!-- Tailoring (1-10) -->
+                    <div class="gallery-item">
+                        <img src="./images/TLR1.JPG" alt="Tailoring">
+                        <div class="gallery-item-overlay">Skills Acquisation; Tailoring</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/TLR2.JPG" alt="Tailoring">
+                        <div class="gallery-item-overlay">Skills Acquisation; Tailoring</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/TLR3.JPG" alt="Tailoring">
+                        <div class="gallery-item-overlay">Skills Acquisation; Tailoring</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/TLR4.JPG" alt="Tailoring">
+                        <div class="gallery-item-overlay">Skills Acquisation; Tailoring</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/TLR5.JPG" alt="Tailoring">
+                        <div class="gallery-item-overlay">Skills Acquisation; Tailoring</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/TLR6.JPG" alt="Tailoring">
+                        <div class="gallery-item-overlay">Skills Acquisation; Tailoring</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/TLR7.JPG" alt="Tailoring">
+                        <div class="gallery-item-overlay">Skills Acquisation; Tailoring</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/TLR8.JPG" alt="Tailoring">
+                        <div class="gallery-item-overlay">Skills Acquisation; Tailoring</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/TLR9.JPG" alt="Tailoring">
+                        <div class="gallery-item-overlay">Skills Acquisation; Tailoring</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="./images/TLR10.JPG" alt="Tailoring">
+                        <div class="gallery-item-overlay">Skills Acquisation; Tailoring</div>
                     </div>
                 </div>
             </div>
@@ -232,13 +560,13 @@
     <!-- PhotoSwipe -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe-lightbox.umd.min.js"></script>
-    
+
     <!-- Masonry -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
-    
+
     <!-- imagesLoaded -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
-    
+
     <script>
         // Initialize PhotoSwipe Lightbox
         const lightbox = new PhotoSwipeLightbox({
@@ -246,7 +574,7 @@
             children: '.gallery-item',
             pswpModule: PhotoSwipe,
             showHideAnimationType: 'fade',
-            
+
             // Get the correct source for each image
             dataSource: [
                 {
@@ -256,7 +584,7 @@
                     // alt: 'Coaching And Mentoring'
                 },
                 {
-                    src: '/api/placeholder/1600/1200',
+                    src: '/api/zolder/1600/1200',
                     width: 1600,
                     height: 1200,
                     // alt: 'Women Empowerment'
@@ -272,9 +600,9 @@
         lightbox.init();
 
         // Initialize Masonry layout after images are loaded
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const grid = document.querySelector('.gallery-grid');
-            imagesLoaded(grid, function() {
+            imagesLoaded(grid, function () {
                 new Masonry(grid, {
                     itemSelector: '.gallery-item',
                     columnWidth: '.gallery-item',
@@ -283,5 +611,101 @@
             });
         });
     </script>
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const pageInfo = document.getElementById('pageInfo');
+            const itemsPerPage = 6;
+            let currentPage = 0;
+            const totalPages = Math.ceil(galleryItems.length / itemsPerPage);
+
+            function updateGallery() {
+                galleryItems.forEach((item, index) => {
+                    const startIndex = currentPage * itemsPerPage;
+                    const endIndex = startIndex + itemsPerPage;
+                    
+                    if (index >= startIndex && index < endIndex) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+                });
+
+                // Update navigation buttons
+                prevBtn.disabled = currentPage === 0;
+                nextBtn.disabled = currentPage === totalPages - 1;
+                
+                // Update page info
+                pageInfo.textContent = `Page ${currentPage + 1} of ${totalPages}`;
+            }
+
+            prevBtn.addEventListener('click', () => {
+                if (currentPage > 0) {
+                    currentPage--;
+                    updateGallery();
+                }
+            });
+
+            nextBtn.addEventListener('click', () => {
+                if (currentPage < totalPages - 1) {
+                    currentPage++;
+                    updateGallery();
+                }
+            });
+
+            // Initialize gallery
+            updateGallery();
+        });
+    </script> -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const prevButton = document.querySelector('.gallery-navigation button:first-child');
+            const nextButton = document.querySelector('.gallery-navigation button:last-child');
+            const pageInfo = document.getElementById('pageInfo');
+
+            const itemsPerPage = 6;
+            const totalPages = Math.ceil(galleryItems.length / itemsPerPage);
+            let currentPage = 1;
+
+            function showPage(page) {
+                const start = (page - 1) * itemsPerPage;
+                const end = start + itemsPerPage;
+
+                galleryItems.forEach((item, index) => {
+                    if (index >= start && index < end) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+                });
+
+                pageInfo.textContent = `Page ${page} of ${totalPages}`;
+                prevButton.disabled = page === 1;
+                nextButton.disabled = page === totalPages;
+            }
+
+            prevButton.addEventListener('click', () => {
+                if (currentPage > 1) {
+                    currentPage--;
+                    showPage(currentPage);
+                }
+            });
+
+            nextButton.addEventListener('click', () => {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    showPage(currentPage);
+                }
+            });
+
+            // Show initial page
+            showPage(1);
+        });
+    </script>
 </body>
+
 </html>
